@@ -1,0 +1,92 @@
+
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| address_book_service |
+| EMP_PAYROLL          |
+| information_schema   |
+| mysql                |
+| performance_schema   |
+| sys                  |
++----------------------+
+6 rows in set (0.01 sec)
+
+mysql> use EMP_PAYROLL;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_emp_payroll |
++-----------------------+
+| employee_payroll      |
++-----------------------+
+1 row in set (0.01 sec)
+
+mysql> create table employee_payroll35 (empid int(20), empname varchar(80), empsalary int (30), dateofjoin Date);
+Query OK, 0 rows affected, 2 warnings (0.09 sec)
+
+mysql> show tables;
++-----------------------+
+| Tables_in_emp_payroll |
++-----------------------+
+| employee_payroll      |
+| employee_payroll35    |
++-----------------------+
+2 rows in set (0.00 sec)
+
+mysql> describe employee_payroll35;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| empid      | int         | YES  |     | NULL    |       |
+| empname    | varchar(80) | YES  |     | NULL    |       |
+| empsalary  | int         | YES  |     | NULL    |       |
+| dateofjoin | date        | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.02 sec)
+
+mysql> select * from employee_payroll35;
+Empty set (0.00 sec)
+
+
+mysql> select * from employee_payroll35;
++-------+---------+-----------+------------+
+| empid | empname | empsalary | dateofjoin |
++-------+---------+-----------+------------+
+|     1 | shital  |      5000 | 2012-01-01 |
++-------+---------+-----------+------------+
+1 row in set (0.00 sec)
+
+
+
+
+mysql> select * from employee_payroll35;
++-------+----------+-----------+------------+
+| empid | empname  | empsalary | dateofjoin |
++-------+----------+-----------+------------+
+|     1 | shital   |      5000 | 2012-01-01 |
+|     2 | preetham |      6000 | 2012-10-01 |
+|     3 | mina     |      7000 | 2012-10-10 |
+|     4 | swapnil  |      8000 | 2012-12-01 |
++-------+----------+-----------+------------+
+4 rows in set (0.00 sec)
+
+
+
+
+mysql> select * from employee_payroll35;
++-------+----------+-----------+------------+
+| empid | empname  | empsalary | dateofjoin |
++-------+----------+-----------+------------+
+|     1 | shital   |      5000 | 2012-01-01 |
+|     2 | preetham |      6000 | 2012-10-01 |
+|     3 | mina     |      7000 | 2012-10-10 |
+|     4 | swapnil  |      8000 | 2012-12-01 |
+|     5 | priya    |      9000 | 2012-12-11 |
++-------+----------+-----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> 
